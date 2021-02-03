@@ -12,7 +12,7 @@ class App extends Component {
     this.setState({miau: 'Hola mundo' })
   }
 
-  manejaClick = texto => {
+  manejaClick = (texto) => {
     console.log(texto);
   }
   render () {
@@ -21,7 +21,7 @@ class App extends Component {
     // const guau = 'Bienvenido guau'
     return (
       <div className="App">
-        <Cabecera miau={miau} manejaClick={this.manejaClick} />
+        <Cabecera miau={miau} manejaClick={this.manejaClick()} />
         {/* <Cabecera miau={guau} manejaClick={this.manejaClick} /> */}
         <P onClick={this.cambiarTextoDelEstado}>
           {miau}
